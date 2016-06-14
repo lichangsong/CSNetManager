@@ -8,8 +8,8 @@
 
 import Foundation
 import Alamofire
-import Haneke
 import SwiftyJSON
+//import Haneke
 
 enum CSAPIManagerErrorType : Int {
     case Default      //没有产生过API请求，这个是manager的默认状态。
@@ -30,7 +30,7 @@ class CSAPIBaseManager: NSObject{
     // 请求
     private var request: Request?
     // 请求返回的数据
-//    private var data: [String: AnyObject]?
+    //    private var data: [String: AnyObject]?
     private var data: SwiftyJSON.JSON!
     // 请求URL
     private var urlString: String?
@@ -41,13 +41,13 @@ class CSAPIBaseManager: NSObject{
     // 请求超时设置
     var timeoutInterval: NSTimeInterval = 20
     // 是否开启缓存
-    var shouldAutoCacheResultWhenSuccess: Bool = false
+    //    var shouldAutoCacheResultWhenSuccess: Bool = false
     // 请求成功代理
     weak var callBackDelegate: CSAPIManagerApiCallBackDelegate?
     // 请求参数代理
     weak var paramSource: CSAPIManagerParamSourceDelegate?
     // 缓存类型
-    let cache = Shared.dataCache
+    //    let cache = Shared.dataCache
     
     // MARK: Initialization
     override init() {
@@ -73,85 +73,85 @@ class CSAPIBaseManager: NSObject{
             return
         }
         // 如果开启缓存,到缓存里面取数据
-        if self.shouldAutoCacheResultWhenSuccess {
-            cache.fetch(key: self.apiURLString())
-                .onSuccess { data in
-                    do {
-                        let dic = try NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.MutableContainers)
-                        self.data = JSON(dic)
-                    }catch {
-                        
-                    }
-                    self.callBackDelegate?.ApiManager(self, finishWithOriginData: self.data)
-                    return
-                }
-                .onFailure({ (error: NSError?) -> () in
-                    self.netRequest()
-                    return
-            })
-        }else {
-            netRequest()
-        }
+        //        if self.shouldAutoCacheResultWhenSuccess {
+        //            cache.fetch(key: self.apiURLString())
+        //                .onSuccess { data in
+        //                    do {
+        //                        let dic = try NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.MutableContainers)
+        //                        self.data = JSON(dic)
+        //                    }catch {
+        //
+        //                    }
+        //                    self.callBackDelegate?.ApiManager(self, finishWithOriginData: self.data)
+        //                    return
+        //                }
+        //                .onFailure({ (error: NSError?) -> () in
+        //                    self.netRequest()
+        //                    return
+        //            })
+        //        }else {
+        netRequest()
+        //        }
     }
     
     private func netRequest() {
         self.isLoading = true
         // RealReachability进行真实网络判断
-//        RealReachability.sharedInstance().currentReachabilityStatus()
-//        RealReachability.sharedInstance().reachabilityWithBlock { (status:ReachabilityStatus) -> Void in
-//            if status == ReachabilityStatus.RealStatusNotReachable {
-//                self.callBackDelegate?.ApiManager(self, failedWithError: CSAPIManagerErrorType.NoNetWork)
-//                // 网络请求结束
-//                self.isLoading = false
-//                return
-//            }
-            // Manager进行网络请求前,取消之前的网络请求
-            self.cancel()
-            // 根据URL以及参数获取到请求的Request
-            self.request = CSRequestGenerator.generateRequestWithAPI(self, method: self.child!.httpMethod, params: self.paramsDic!)
-            // 设置超时时间
-            self.request?.session.configuration.timeoutIntervalForRequest = self.timeoutInterval
-            // 请求获取JSON数据
-            self.request?.responseJSON{ response in
-                // 网络请求结束
-                self.isLoading = false
-
-                if response.result.error != nil {
-//                if let error = response.result.error {
-                    // 网络请求失败,超时
-                    self.callBackDelegate?.ApiManager(self, failedWithError: CSAPIManagerErrorType.Timeout)
-                }else if response.result.value != nil {
-                    
-                    let value = JSON(response.result.value!)
-                    // 网络请求成功，返回数据
-                    self.data = value
-                    self.callBackDelegate?.ApiManager(self, finishWithOriginData: self.data)
-                    
-                    // 缓存存储
-                    if self.shouldAutoCacheResultWhenSuccess {
-                        let dic = response.result.value
-                        var data: NSData?
-                        do {
-                            data = try NSJSONSerialization.dataWithJSONObject(dic!, options: NSJSONWritingOptions.PrettyPrinted)
-                            self.cache.set(value:data!, key: self.apiURLString())
-                        }catch {
-                            
-                        }
-                    }
-                    //                    // 根据具体的服务器返回的判断是否成功的key和Value来判断
-                    //                    if value[CSAPIBaseManager.successKey] as! Int == CSAPIBaseManager.successValue {
-                    //                        self.callBackDelegate?.ApiManager(self, finishWithOriginData: value)
-                    //                    }else {
-                    //                        // TODO: 参数问题
-                    //                        self.callBackDelegate?.ApiManager(self, failedWithError: CSAPIManagerErrorType.ParamsError)
-                    //                    }
-                }else {
-                    // 未知错误
-                    self.callBackDelegate?.ApiManager(self, failedWithError: CSAPIManagerErrorType.Timeout)
-                }
+        //        RealReachability.sharedInstance().currentReachabilityStatus()
+        //        RealReachability.sharedInstance().reachabilityWithBlock { (status:ReachabilityStatus) -> Void in
+        //            if status == ReachabilityStatus.RealStatusNotReachable {
+        //                self.callBackDelegate?.ApiManager(self, failedWithError: CSAPIManagerErrorType.NoNetWork)
+        //                // 网络请求结束
+        //                self.isLoading = false
+        //                return
+        //            }
+        // Manager进行网络请求前,取消之前的网络请求
+        self.cancel()
+        // 根据URL以及参数获取到请求的Request
+        self.request = CSRequestGenerator.generateRequestWithAPI(self, method: self.child!.httpMethod, params: self.paramsDic!)
+        // 设置超时时间
+        self.request?.session.configuration.timeoutIntervalForRequest = self.timeoutInterval
+        // 请求获取JSON数据
+        self.request?.responseJSON{ response in
+            // 网络请求结束
+            self.isLoading = false
+            
+            if response.result.error != nil {
+                //                if let error = response.result.error {
+                // 网络请求失败,超时
+                self.callBackDelegate?.ApiManager(self, failedWithError: CSAPIManagerErrorType.Timeout)
+            }else if response.result.value != nil {
+                
+                let value = JSON(response.result.value!)
+                // 网络请求成功，返回数据
+                self.data = value
+                self.callBackDelegate?.ApiManager(self, finishWithOriginData: self.data)
+                
+                // 缓存存储
+                //                    if self.shouldAutoCacheResultWhenSuccess {
+                //                        let dic = response.result.value
+                //                        var data: NSData?
+                //                        do {
+                //                            data = try NSJSONSerialization.dataWithJSONObject(dic!, options: NSJSONWritingOptions.PrettyPrinted)
+                //                            self.cache.set(value:data!, key: self.apiURLString())
+                //                        }catch {
+                //
+                //                        }
+                //                    }
+                //                    // 根据具体的服务器返回的判断是否成功的key和Value来判断
+                //                    if value[CSAPIBaseManager.successKey] as! Int == CSAPIBaseManager.successValue {
+                //                        self.callBackDelegate?.ApiManager(self, finishWithOriginData: value)
+                //                    }else {
+                //                        // TODO: 参数问题
+                //                        self.callBackDelegate?.ApiManager(self, failedWithError: CSAPIManagerErrorType.ParamsError)
+                //                    }
+            }else {
+                // 未知错误
+                self.callBackDelegate?.ApiManager(self, failedWithError: CSAPIManagerErrorType.Timeout)
             }
         }
-//    }
+    }
+    //    }
     
     // 取消请求
     func cancel() -> Void {

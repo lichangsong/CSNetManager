@@ -10,6 +10,5 @@ Pod::Spec.new do |s|
   s.source_files = 'CSNetManager', 'CSNetManager/**/*.swift'
   s.requires_arc = true
   s.dependency "Alamofire", "~> 3.0"
-  s.dependency "SwiftyJSON"
-  s.dependency "HanekeSwift"
+  s.dependency "SwiftyJSON", "~> 2.3.2"
 end
