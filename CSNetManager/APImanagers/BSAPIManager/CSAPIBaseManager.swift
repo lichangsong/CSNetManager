@@ -10,6 +10,7 @@ import Foundation
 import Alamofire
 import SwiftyJSON
 import Haneke
+import RealReachability
 
 public enum CSAPIManagerErrorType : Int {
     case Default      //没有产生过API请求，这个是manager的默认状态。
@@ -47,7 +48,7 @@ public class CSAPIBaseManager: NSObject{
     // 请求参数代理
     public weak var paramSource: CSAPIManagerParamSourceDelegate?
     // 缓存类型
-    //    let cache = Shared.dataCache
+    let cache = Shared.dataCache
     
     // MARK: Initialization
     public override init() {
