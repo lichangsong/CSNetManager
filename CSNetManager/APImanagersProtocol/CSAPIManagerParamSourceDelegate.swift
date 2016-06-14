@@ -8,7 +8,7 @@
 
 import Foundation
 
-protocol CSAPIManagerParamSourceDelegate : NSObjectProtocol{
+public protocol CSAPIManagerParamSourceDelegate : NSObjectProtocol{
     // 设置网络请求参数回调
     func paramsForApi(manager: CSAPIBaseManager) -> [String: AnyObject]
 }

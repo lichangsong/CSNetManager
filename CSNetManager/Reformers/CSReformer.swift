@@ -7,7 +7,7 @@
 //
 import SwiftyJSON
 
-protocol CSReformer {
+public protocol CSReformer {
     
     func reformData(manager: CSAPIBaseManager, data: JSON) -> AnyObject
 }

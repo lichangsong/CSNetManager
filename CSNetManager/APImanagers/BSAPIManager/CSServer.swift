@@ -16,7 +16,7 @@ enum ServerType : Int{
     case LocalLine = 3
 }
 
-class CSServer : NSObject {
+public class CSServer : NSObject {
     // 设置当前服务器环境
     static var serverType: ServerType = ServerType.OnLine
     // 线上环境地址
@@ -51,10 +51,10 @@ class CSServer : NSObject {
 }
 
 // MARK: 设置不同的环境 预上线，上线，测试, 下线
-let kServer = CSServer(online: "http://api.huixueyuan.cn/ifdood_dev01/v2",
-                      offline: "http://api.huixueyuan.cn/ifdood_dev01/v2",
-                      prepareOnLine: "http://api.huixueyuan.cn/ifdood_dev01/v2",
-                      localLine: "http://api.huixueyuan.cn/ifdood_dev01/v2")
+public let kServer = CSServer(online: "http://api.huixueyuan.cn/ifdood_dev01/v2",
+                              offline: "http://api.huixueyuan.cn/ifdood_dev01/v2",
+                              prepareOnLine: "http://api.huixueyuan.cn/ifdood_dev01/v2",
+                              localLine: "http://api.huixueyuan.cn/ifdood_dev01/v2")
 
 
 

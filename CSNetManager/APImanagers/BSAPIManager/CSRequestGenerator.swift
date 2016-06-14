@@ -17,3 +17,17 @@ class CSRequestGenerator: NSObject {
         return request
     }
 }
+
+extension NSData {
+    // 将字典转换成JSON字符串
+    class func jsonString(jsonDictionary: [String:AnyObject]) -> String? {
+        do {
+            let  data  = try NSJSONSerialization.dataWithJSONObject(jsonDictionary, options: NSJSONWritingOptions())
+            let strJson = NSString(data: data, encoding: NSUTF8StringEncoding)
+            return strJson as? String
+        } catch {
+            // No-op
+        }
+        return ""
+    }
+}

@@ -9,7 +9,7 @@
 import Foundation
 import Alamofire
 
-protocol CSAPIManagerDelegate : NSObjectProtocol {
+public protocol CSAPIManagerDelegate : NSObjectProtocol {
     // API版本号
     var apiVersion: String { get }
     // API地址
