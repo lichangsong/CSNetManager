@@ -45,9 +45,6 @@ You should open the `{Project}.xcworkspace` instead of the `{Project}.xcodeproj`
 
 For more information about how to use CocoaPods, I suggest [this tutorial](http://www.raywenderlich.com/64546/introduction-to-cocoapods-2).
 
-## Usage
-
-You can find the full API documentation at [CocoaDocs](http://cocoadocs.org/docsets/Kingfisher/).
 
 ## Contact
 
