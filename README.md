@@ -32,7 +32,7 @@ source 'https://github.com/CocoaPods/Specs.git'
 platform :ios, '8.0'
 use_frameworks!
 
-pod 'CSNetManager', git:'https://github.com/lichangsong/CSNetManager'
+pod 'CSNetManager'
 ```
 
 Then, run the following command:
