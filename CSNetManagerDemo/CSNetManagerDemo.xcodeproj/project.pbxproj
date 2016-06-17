@@ -1,0 +1,682 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3D52DA2A1D13CDB100128140 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D52DA291D13CDB100128140 /* AppDelegate.swift */; };
+		3D52DA2C1D13CDB100128140 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D52DA2B1D13CDB100128140 /* ViewController.swift */; };
+		3D52DA2F1D13CDB100128140 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D52DA2D1D13CDB100128140 /* Main.storyboard */; };
+		3D52DA311D13CDB100128140 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3D52DA301D13CDB100128140 /* Assets.xcassets */; };
+		3D52DA341D13CDB100128140 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D52DA321D13CDB100128140 /* LaunchScreen.storyboard */; };
+		3D52DA3F1D13CDB100128140 /* CSNetManagerDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D52DA3E1D13CDB100128140 /* CSNetManagerDemoTests.swift */; };
+		3D52DA4A1D13CDB100128140 /* CSNetManagerDemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D52DA491D13CDB100128140 /* CSNetManagerDemoUITests.swift */; };
+		3D52DA651D13CF1A00128140 /* CSAPIBaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D52DA5A1D13CF1A00128140 /* CSAPIBaseManager.swift */; };
+		3D52DA661D13CF1A00128140 /* CSRequestGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D52DA5B1D13CF1A00128140 /* CSRequestGenerator.swift */; };
+		3D52DA671D13CF1A00128140 /* CSServer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D52DA5C1D13CF1A00128140 /* CSServer.swift */; };
+		3D52DA681D13CF1A00128140 /* CSAPIManagerApiCallBackDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D52DA5E1D13CF1A00128140 /* CSAPIManagerApiCallBackDelegate.swift */; };
+		3D52DA691D13CF1A00128140 /* CSAPIManagerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D52DA5F1D13CF1A00128140 /* CSAPIManagerDelegate.swift */; };
+		3D52DA6A1D13CF1A00128140 /* CSAPIManagerParamSourceDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D52DA601D13CF1A00128140 /* CSAPIManagerParamSourceDelegate.swift */; };
+		3D52DA6B1D13CF1A00128140 /* CSNetworkCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D52DA621D13CF1A00128140 /* CSNetworkCache.swift */; };
+		3D52DA6C1D13CF1A00128140 /* CSReformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D52DA641D13CF1A00128140 /* CSReformer.swift */; };
+		3D52DA701D13CF3100128140 /* MessageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D52DA6D1D13CF3100128140 /* MessageManager.swift */; };
+		3D52DA711D13CF3100128140 /* MessageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D52DA6E1D13CF3100128140 /* MessageModel.swift */; };
+		3D52DA721D13CF3100128140 /* MessageReformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D52DA6F1D13CF3100128140 /* MessageReformer.swift */; };
+		3D52DA741D13CF3A00128140 /* ViewControllerHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D52DA731D13CF3A00128140 /* ViewControllerHelper.swift */; };
+		3EC211956F36453EF87BDACA /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F7F9ED9E17C73FC62ED5C37 /* Pods.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		3D52DA3B1D13CDB100128140 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3D52DA1E1D13CDB100128140 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3D52DA251D13CDB100128140;
+			remoteInfo = CSNetManagerDemo;
+		};
+		3D52DA461D13CDB100128140 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3D52DA1E1D13CDB100128140 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3D52DA251D13CDB100128140;
+			remoteInfo = CSNetManagerDemo;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		3D52DA261D13CDB100128140 /* CSNetManagerDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CSNetManagerDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3D52DA291D13CDB100128140 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		3D52DA2B1D13CDB100128140 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		3D52DA2E1D13CDB100128140 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		3D52DA301D13CDB100128140 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3D52DA331D13CDB100128140 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		3D52DA351D13CDB100128140 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3D52DA3A1D13CDB100128140 /* CSNetManagerDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CSNetManagerDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3D52DA3E1D13CDB100128140 /* CSNetManagerDemoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSNetManagerDemoTests.swift; sourceTree = "<group>"; };
+		3D52DA401D13CDB100128140 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3D52DA451D13CDB100128140 /* CSNetManagerDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CSNetManagerDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3D52DA491D13CDB100128140 /* CSNetManagerDemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSNetManagerDemoUITests.swift; sourceTree = "<group>"; };
+		3D52DA4B1D13CDB100128140 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3D52DA5A1D13CF1A00128140 /* CSAPIBaseManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CSAPIBaseManager.swift; sourceTree = "<group>"; };
+		3D52DA5B1D13CF1A00128140 /* CSRequestGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CSRequestGenerator.swift; sourceTree = "<group>"; };
+		3D52DA5C1D13CF1A00128140 /* CSServer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CSServer.swift; sourceTree = "<group>"; };
+		3D52DA5E1D13CF1A00128140 /* CSAPIManagerApiCallBackDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CSAPIManagerApiCallBackDelegate.swift; sourceTree = "<group>"; };
+		3D52DA5F1D13CF1A00128140 /* CSAPIManagerDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CSAPIManagerDelegate.swift; sourceTree = "<group>"; };
+		3D52DA601D13CF1A00128140 /* CSAPIManagerParamSourceDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CSAPIManagerParamSourceDelegate.swift; sourceTree = "<group>"; };
+		3D52DA621D13CF1A00128140 /* CSNetworkCache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CSNetworkCache.swift; sourceTree = "<group>"; };
+		3D52DA641D13CF1A00128140 /* CSReformer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CSReformer.swift; sourceTree = "<group>"; };
+		3D52DA6D1D13CF3100128140 /* MessageManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageManager.swift; sourceTree = "<group>"; };
+		3D52DA6E1D13CF3100128140 /* MessageModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageModel.swift; sourceTree = "<group>"; };
+		3D52DA6F1D13CF3100128140 /* MessageReformer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageReformer.swift; sourceTree = "<group>"; };
+		3D52DA731D13CF3A00128140 /* ViewControllerHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerHelper.swift; sourceTree = "<group>"; };
+		4F7F9ED9E17C73FC62ED5C37 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		96162459CFE916A41D06559B /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		C69B977F539C1C8A830D6EE6 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3D52DA231D13CDB100128140 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3EC211956F36453EF87BDACA /* Pods.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3D52DA371D13CDB100128140 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3D52DA421D13CDB100128140 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3D52DA1D1D13CDB100128140 = {
+			isa = PBXGroup;
+			children = (
+				3D52DA281D13CDB100128140 /* CSNetManagerDemo */,
+				3D52DA3D1D13CDB100128140 /* CSNetManagerDemoTests */,
+				3D52DA481D13CDB100128140 /* CSNetManagerDemoUITests */,
+				3D52DA271D13CDB100128140 /* Products */,
+				4628E93BEF1CA8D76EFCA355 /* Pods */,
+				69482C58D2D109003D59C2FB /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		3D52DA271D13CDB100128140 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3D52DA261D13CDB100128140 /* CSNetManagerDemo.app */,
+				3D52DA3A1D13CDB100128140 /* CSNetManagerDemoTests.xctest */,
+				3D52DA451D13CDB100128140 /* CSNetManagerDemoUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3D52DA281D13CDB100128140 /* CSNetManagerDemo */ = {
+			isa = PBXGroup;
+			children = (
+				3D52DA571D13CF1A00128140 /* CSNetManager */,
+				3D52DA291D13CDB100128140 /* AppDelegate.swift */,
+				3D52DA2B1D13CDB100128140 /* ViewController.swift */,
+				3D52DA731D13CF3A00128140 /* ViewControllerHelper.swift */,
+				3D52DA6D1D13CF3100128140 /* MessageManager.swift */,
+				3D52DA6E1D13CF3100128140 /* MessageModel.swift */,
+				3D52DA6F1D13CF3100128140 /* MessageReformer.swift */,
+				3D52DA2D1D13CDB100128140 /* Main.storyboard */,
+				3D52DA301D13CDB100128140 /* Assets.xcassets */,
+				3D52DA321D13CDB100128140 /* LaunchScreen.storyboard */,
+				3D52DA351D13CDB100128140 /* Info.plist */,
+			);
+			path = CSNetManagerDemo;
+			sourceTree = "<group>";
+		};
+		3D52DA3D1D13CDB100128140 /* CSNetManagerDemoTests */ = {
+			isa = PBXGroup;
+			children = (
+				3D52DA3E1D13CDB100128140 /* CSNetManagerDemoTests.swift */,
+				3D52DA401D13CDB100128140 /* Info.plist */,
+			);
+			path = CSNetManagerDemoTests;
+			sourceTree = "<group>";
+		};
+		3D52DA481D13CDB100128140 /* CSNetManagerDemoUITests */ = {
+			isa = PBXGroup;
+			children = (
+				3D52DA491D13CDB100128140 /* CSNetManagerDemoUITests.swift */,
+				3D52DA4B1D13CDB100128140 /* Info.plist */,
+			);
+			path = CSNetManagerDemoUITests;
+			sourceTree = "<group>";
+		};
+		3D52DA571D13CF1A00128140 /* CSNetManager */ = {
+			isa = PBXGroup;
+			children = (
+				3D52DA581D13CF1A00128140 /* APImanagers */,
+				3D52DA5D1D13CF1A00128140 /* APImanagersProtocol */,
+				3D52DA611D13CF1A00128140 /* Cache */,
+				3D52DA631D13CF1A00128140 /* Reformers */,
+			);
+			name = CSNetManager;
+			path = ../../CSNetManager;
+			sourceTree = "<group>";
+		};
+		3D52DA581D13CF1A00128140 /* APImanagers */ = {
+			isa = PBXGroup;
+			children = (
+				3D52DA591D13CF1A00128140 /* BSAPIManager */,
+			);
+			path = APImanagers;
+			sourceTree = "<group>";
+		};
+		3D52DA591D13CF1A00128140 /* BSAPIManager */ = {
+			isa = PBXGroup;
+			children = (
+				3D52DA5A1D13CF1A00128140 /* CSAPIBaseManager.swift */,
+				3D52DA5B1D13CF1A00128140 /* CSRequestGenerator.swift */,
+				3D52DA5C1D13CF1A00128140 /* CSServer.swift */,
+			);
+			path = BSAPIManager;
+			sourceTree = "<group>";
+		};
+		3D52DA5D1D13CF1A00128140 /* APImanagersProtocol */ = {
+			isa = PBXGroup;
+			children = (
+				3D52DA5E1D13CF1A00128140 /* CSAPIManagerApiCallBackDelegate.swift */,
+				3D52DA5F1D13CF1A00128140 /* CSAPIManagerDelegate.swift */,
+				3D52DA601D13CF1A00128140 /* CSAPIManagerParamSourceDelegate.swift */,
+			);
+			path = APImanagersProtocol;
+			sourceTree = "<group>";
+		};
+		3D52DA611D13CF1A00128140 /* Cache */ = {
+			isa = PBXGroup;
+			children = (
+				3D52DA621D13CF1A00128140 /* CSNetworkCache.swift */,
+			);
+			path = Cache;
+			sourceTree = "<group>";
+		};
+		3D52DA631D13CF1A00128140 /* Reformers */ = {
+			isa = PBXGroup;
+			children = (
+				3D52DA641D13CF1A00128140 /* CSReformer.swift */,
+			);
+			path = Reformers;
+			sourceTree = "<group>";
+		};
+		4628E93BEF1CA8D76EFCA355 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				96162459CFE916A41D06559B /* Pods.debug.xcconfig */,
+				C69B977F539C1C8A830D6EE6 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		69482C58D2D109003D59C2FB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4F7F9ED9E17C73FC62ED5C37 /* Pods.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3D52DA251D13CDB100128140 /* CSNetManagerDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3D52DA4E1D13CDB100128140 /* Build configuration list for PBXNativeTarget "CSNetManagerDemo" */;
+			buildPhases = (
+				C4F978187843097130329835 /* Check Pods Manifest.lock */,
+				3D52DA221D13CDB100128140 /* Sources */,
+				3D52DA231D13CDB100128140 /* Frameworks */,
+				3D52DA241D13CDB100128140 /* Resources */,
+				3911EB2C4F2DB7F27297CBA8 /* Embed Pods Frameworks */,
+				136962C28C35D9CB6F3C19F0 /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CSNetManagerDemo;
+			productName = CSNetManagerDemo;
+			productReference = 3D52DA261D13CDB100128140 /* CSNetManagerDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		3D52DA391D13CDB100128140 /* CSNetManagerDemoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3D52DA511D13CDB100128140 /* Build configuration list for PBXNativeTarget "CSNetManagerDemoTests" */;
+			buildPhases = (
+				3D52DA361D13CDB100128140 /* Sources */,
+				3D52DA371D13CDB100128140 /* Frameworks */,
+				3D52DA381D13CDB100128140 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3D52DA3C1D13CDB100128140 /* PBXTargetDependency */,
+			);
+			name = CSNetManagerDemoTests;
+			productName = CSNetManagerDemoTests;
+			productReference = 3D52DA3A1D13CDB100128140 /* CSNetManagerDemoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		3D52DA441D13CDB100128140 /* CSNetManagerDemoUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3D52DA541D13CDB100128140 /* Build configuration list for PBXNativeTarget "CSNetManagerDemoUITests" */;
+			buildPhases = (
+				3D52DA411D13CDB100128140 /* Sources */,
+				3D52DA421D13CDB100128140 /* Frameworks */,
+				3D52DA431D13CDB100128140 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3D52DA471D13CDB100128140 /* PBXTargetDependency */,
+			);
+			name = CSNetManagerDemoUITests;
+			productName = CSNetManagerDemoUITests;
+			productReference = 3D52DA451D13CDB100128140 /* CSNetManagerDemoUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3D52DA1E1D13CDB100128140 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = LiChangsong;
+				TargetAttributes = {
+					3D52DA251D13CDB100128140 = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
+					3D52DA391D13CDB100128140 = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = 3D52DA251D13CDB100128140;
+					};
+					3D52DA441D13CDB100128140 = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = 3D52DA251D13CDB100128140;
+					};
+				};
+			};
+			buildConfigurationList = 3D52DA211D13CDB100128140 /* Build configuration list for PBXProject "CSNetManagerDemo" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 3D52DA1D1D13CDB100128140;
+			productRefGroup = 3D52DA271D13CDB100128140 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3D52DA251D13CDB100128140 /* CSNetManagerDemo */,
+				3D52DA391D13CDB100128140 /* CSNetManagerDemoTests */,
+				3D52DA441D13CDB100128140 /* CSNetManagerDemoUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3D52DA241D13CDB100128140 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3D52DA341D13CDB100128140 /* LaunchScreen.storyboard in Resources */,
+				3D52DA311D13CDB100128140 /* Assets.xcassets in Resources */,
+				3D52DA2F1D13CDB100128140 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3D52DA381D13CDB100128140 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3D52DA431D13CDB100128140 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		136962C28C35D9CB6F3C19F0 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3911EB2C4F2DB7F27297CBA8 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C4F978187843097130329835 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3D52DA221D13CDB100128140 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3D52DA6A1D13CF1A00128140 /* CSAPIManagerParamSourceDelegate.swift in Sources */,
+				3D52DA6C1D13CF1A00128140 /* CSReformer.swift in Sources */,
+				3D52DA721D13CF3100128140 /* MessageReformer.swift in Sources */,
+				3D52DA651D13CF1A00128140 /* CSAPIBaseManager.swift in Sources */,
+				3D52DA661D13CF1A00128140 /* CSRequestGenerator.swift in Sources */,
+				3D52DA2C1D13CDB100128140 /* ViewController.swift in Sources */,
+				3D52DA681D13CF1A00128140 /* CSAPIManagerApiCallBackDelegate.swift in Sources */,
+				3D52DA671D13CF1A00128140 /* CSServer.swift in Sources */,
+				3D52DA711D13CF3100128140 /* MessageModel.swift in Sources */,
+				3D52DA691D13CF1A00128140 /* CSAPIManagerDelegate.swift in Sources */,
+				3D52DA741D13CF3A00128140 /* ViewControllerHelper.swift in Sources */,
+				3D52DA2A1D13CDB100128140 /* AppDelegate.swift in Sources */,
+				3D52DA6B1D13CF1A00128140 /* CSNetworkCache.swift in Sources */,
+				3D52DA701D13CF3100128140 /* MessageManager.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3D52DA361D13CDB100128140 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3D52DA3F1D13CDB100128140 /* CSNetManagerDemoTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3D52DA411D13CDB100128140 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3D52DA4A1D13CDB100128140 /* CSNetManagerDemoUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3D52DA3C1D13CDB100128140 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3D52DA251D13CDB100128140 /* CSNetManagerDemo */;
+			targetProxy = 3D52DA3B1D13CDB100128140 /* PBXContainerItemProxy */;
+		};
+		3D52DA471D13CDB100128140 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3D52DA251D13CDB100128140 /* CSNetManagerDemo */;
+			targetProxy = 3D52DA461D13CDB100128140 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		3D52DA2D1D13CDB100128140 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3D52DA2E1D13CDB100128140 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		3D52DA321D13CDB100128140 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3D52DA331D13CDB100128140 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		3D52DA4C1D13CDB100128140 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		3D52DA4D1D13CDB100128140 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		3D52DA4F1D13CDB100128140 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 96162459CFE916A41D06559B /* Pods.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = CSNetManagerDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = me.lichangsong.CSNetManagerDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		3D52DA501D13CDB100128140 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C69B977F539C1C8A830D6EE6 /* Pods.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = CSNetManagerDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = me.lichangsong.CSNetManagerDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		3D52DA521D13CDB100128140 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = CSNetManagerDemoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = me.lichangsong.CSNetManagerDemoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CSNetManagerDemo.app/CSNetManagerDemo";
+			};
+			name = Debug;
+		};
+		3D52DA531D13CDB100128140 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = CSNetManagerDemoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = me.lichangsong.CSNetManagerDemoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CSNetManagerDemo.app/CSNetManagerDemo";
+			};
+			name = Release;
+		};
+		3D52DA551D13CDB100128140 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = CSNetManagerDemoUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = me.lichangsong.CSNetManagerDemoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = CSNetManagerDemo;
+			};
+			name = Debug;
+		};
+		3D52DA561D13CDB100128140 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = CSNetManagerDemoUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = me.lichangsong.CSNetManagerDemoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = CSNetManagerDemo;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3D52DA211D13CDB100128140 /* Build configuration list for PBXProject "CSNetManagerDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3D52DA4C1D13CDB100128140 /* Debug */,
+				3D52DA4D1D13CDB100128140 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3D52DA4E1D13CDB100128140 /* Build configuration list for PBXNativeTarget "CSNetManagerDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3D52DA4F1D13CDB100128140 /* Debug */,
+				3D52DA501D13CDB100128140 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3D52DA511D13CDB100128140 /* Build configuration list for PBXNativeTarget "CSNetManagerDemoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3D52DA521D13CDB100128140 /* Debug */,
+				3D52DA531D13CDB100128140 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3D52DA541D13CDB100128140 /* Build configuration list for PBXNativeTarget "CSNetManagerDemoUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3D52DA551D13CDB100128140 /* Debug */,
+				3D52DA561D13CDB100128140 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 3D52DA1E1D13CDB100128140 /* Project object */;
+}
