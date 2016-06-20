@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "CSNetManager"
-  s.version      = "0.0.3"
+  s.version      = "0.0.4"
   s.summary      = "The package of NetworkManager"
   s.homepage     = "https://github.com/lichangsong"
   s.license      = "MIT"
