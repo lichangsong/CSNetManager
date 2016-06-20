@@ -31,6 +31,7 @@ class ViewControllerHelper: NSObject,CSAPIManagerApiCallBackDelegate,CSAPIManage
     func ApiManager(apiManager: CSAPIBaseManager, finishWithOriginData data: JSON) -> Void {
         if apiManager.isKindOfClass(MessageManager) {
             // 隐藏菊花
+            messageManager?.hidenHUD()
             let messageModel = apiManager.fetchData(messageReformer!) as! MessageModel
             
             callBackDelegate!.callBackSuccess()
@@ -40,7 +41,7 @@ class ViewControllerHelper: NSObject,CSAPIManagerApiCallBackDelegate,CSAPIManage
     // 网络请求失败后回调
     func ApiManager(apimanager: CSAPIBaseManager, failedWithError error: CSAPIManagerErrorType) -> Void {
         callBackDelegate!.callBackFailue()
-        
+        messageManager?.hidenHUD()
         switch error {
         case CSAPIManagerErrorType.Timeout:
             // do something

@@ -23,7 +23,7 @@
 import Foundation
 
 // 服务器类型
-enum ServerType : Int{
+public enum ServerType : Int{
     case OnLine = 0
     case OffLine = 1
     case PrepareOnLine = 2
@@ -32,7 +32,7 @@ enum ServerType : Int{
 
 public class CSServer : NSObject {
     // 设置当前服务器环境
-    static var serverType: ServerType = ServerType.OnLine
+    private var serverType: ServerType
     // 线上环境地址
     private var onlineURL: String
     // 离线环境地址
@@ -44,7 +44,7 @@ public class CSServer : NSObject {
     
     var url: String {
         get {
-            switch CSServer.serverType {
+            switch serverType {
             case ServerType.OnLine :
                 return self.onlineURL
             case ServerType.OffLine :
@@ -55,7 +55,8 @@ public class CSServer : NSObject {
                 return self.localLineURL            }
         }
     }
-    init(online: String, offline: String, prepareOnLine: String, localLine: String) {
+    public init(serverType: ServerType, online: String, offline: String, prepareOnLine: String, localLine: String) {
+        self.serverType = serverType
         self.onlineURL = online
         self.offlineURL = offline
         self.prepareOnLineURL = prepareOnLine
@@ -63,13 +64,6 @@ public class CSServer : NSObject {
         super.init()
     }
 }
-
-// MARK: 设置不同的环境 预上线，上线，测试, 下线
-public let kServer = CSServer(online: "http://api.huixueyuan.cn/ifdood_dev01/v2",
-                              offline: "http://api.huixueyuan.cn/ifdood_dev01/v2",
-                              prepareOnLine: "http://api.huixueyuan.cn/ifdood_dev01/v2",
-                              localLine: "http://api.huixueyuan.cn/ifdood_dev01/v2")
-
 
 
 

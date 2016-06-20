@@ -25,6 +25,7 @@ import Alamofire
 import SwiftyJSON
 import Haneke
 import RealReachability
+import MBProgressHUD
 
 public enum CSAPIManagerErrorType : Int {
     case Default      //没有产生过API请求，这个是manager的默认状态。
@@ -63,6 +64,8 @@ public class CSAPIBaseManager: NSObject{
     public weak var paramSource: CSAPIManagerParamSourceDelegate?
     // 缓存类型
     let cache = Shared.dataCache
+    // 显示菊花的View
+    public var showHUDView: UIView!
     
     // MARK: Initialization
     public override init() {
@@ -180,10 +183,22 @@ public class CSAPIBaseManager: NSObject{
     // TODO:获取API 缺少 RTAPIManagerValidator API的校验环节
     func apiURLString() -> String {
         if self.child!.apiVersion.isEmpty {
-            self.urlString = self.child!.server.url + "/" + self.child!.apiName
+            self.urlString = self.child!.server.url + self.child!.apiName
+            print(self.urlString)
         }else {
             self.urlString = self.child!.server.url + "/" + self.child!.apiVersion + "/" + self.child!.apiName
         }
         return self.urlString!
     }
 }
+
+extension CSAPIBaseManager {
+    public func showHUD() {
+        MBProgressHUD.showHUDAddedTo(showHUDView, animated: false)
+    }
+    public func hidenHUD() {
+        MBProgressHUD.hideHUDForView(showHUDView, animated: false)
+    }
+}
+
+

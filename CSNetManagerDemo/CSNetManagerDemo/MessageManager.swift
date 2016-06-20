@@ -12,14 +12,13 @@ import Alamofire
 
 class MessageManager: CSAPIBaseManager,CSAPIManagerDelegate {
     
-    var showHUDView: UIView?
     // 版本号
     var apiVersion: String {
         get{return ""}
     }
     // 请求URL
     var apiName: String {
-        get{return "messages/getMessageData.php"}
+        get{return "/messages/getMessageData.php"}
     }
     // 请求方式
     var httpMethod: Alamofire.Method {

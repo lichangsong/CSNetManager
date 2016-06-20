@@ -13,4 +13,5 @@ Pod::Spec.new do |s|
   s.dependency "SwiftyJSON", "~> 2.3.2"
   s.dependency "HanekeSwift", "~> 0.10.1"
   s.dependency "RealReachability", "~> 1.1.3"
+  s.dependency "MBProgressHUD"
 end
