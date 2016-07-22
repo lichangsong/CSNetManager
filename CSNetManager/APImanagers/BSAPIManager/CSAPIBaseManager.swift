@@ -184,7 +184,6 @@ public class CSAPIBaseManager: NSObject{
     func apiURLString() -> String {
         if self.child!.apiVersion.isEmpty {
             self.urlString = self.child!.server.url + self.child!.apiName
-            print(self.urlString)
         }else {
             self.urlString = self.child!.server.url + "/" + self.child!.apiVersion + "/" + self.child!.apiName
         }
