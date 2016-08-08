@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "CSNetManager"
-  s.version      = "0.0.5"
+  s.version      = "0.0.6"
   s.summary      = "The package of NetworkManager"
   s.homepage     = "https://github.com/lichangsong"
   s.license      = "MIT"
@@ -13,5 +13,4 @@ Pod::Spec.new do |s|
   s.dependency "SwiftyJSON", "~> 2.3.2"
   s.dependency "HanekeSwift", "~> 0.10.1"
   s.dependency "RealReachability", "~> 1.1.3"
-  s.dependency "MBProgressHUD"
 end

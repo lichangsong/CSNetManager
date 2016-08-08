@@ -25,7 +25,6 @@ import Alamofire
 import SwiftyJSON
 import Haneke
 import RealReachability
-import MBProgressHUD
 
 public enum CSAPIManagerErrorType : Int {
     case Default      //没有产生过API请求，这个是manager的默认状态。
@@ -34,6 +33,7 @@ public enum CSAPIManagerErrorType : Int {
     case ParamsError  //参数错误，此时manager不会调用API，因为参数验证是在调用API之前做的。
     case Timeout      //请求超时。RTApiProxy设置的是20秒超时，具体超时时间的设置请自己去看RTApiProxy的相关代码。
     case NoNetWork    //网络不通。在调用API之前会判断一下当前网络是否通畅，这个也是在调用API之前验证的，和上面超时的状态是有区别的。
+    case RequestFailed //请求失败，用于无法区分请求失败是因为参数不符和请求超时
 }
 
 public class CSAPIBaseManager: NSObject{
@@ -55,7 +55,7 @@ public class CSAPIBaseManager: NSObject{
     // 是否正在进行网络请求
     var isLoading = false
     // 请求超时设置
-    var timeoutInterval: NSTimeInterval = 20
+    public var timeoutInterval: NSTimeInterval = 20
     // 是否开启缓存
     public var shouldAutoCacheResultWhenSuccess: Bool = false
     // 请求成功代理
@@ -135,9 +135,8 @@ public class CSAPIBaseManager: NSObject{
                 self.isLoading = false
                 
                 if response.result.error != nil {
-                    //                if let error = response.result.error {
-                    // 网络请求失败,超时
-                    self.callBackDelegate?.ApiManager(self, failedWithError: CSAPIManagerErrorType.Timeout)
+                    // 网络请求失败,超时和参数错误
+                    self.callBackDelegate?.ApiManager(self, failedWithError: CSAPIManagerErrorType.RequestFailed)
                 }else if response.result.value != nil {
                     
                     let value = JSON(response.result.value!)
@@ -163,10 +162,11 @@ public class CSAPIBaseManager: NSObject{
                     //                        // TODO: 参数问题
                     //                        self.callBackDelegate?.ApiManager(self, failedWithError: CSAPIManagerErrorType.ParamsError)
                     //                    }
-                }else {
-                    // 未知错误
-                    self.callBackDelegate?.ApiManager(self, failedWithError: CSAPIManagerErrorType.Timeout)
                 }
+//                else {
+//                    // 未知错误
+//                    self.callBackDelegate?.ApiManager(self, failedWithError: CSAPIManagerErrorType.Timeout)
+//                }
             }
         }
     }
@@ -188,15 +188,6 @@ public class CSAPIBaseManager: NSObject{
             self.urlString = self.child!.server.url + "/" + self.child!.apiVersion + "/" + self.child!.apiName
         }
         return self.urlString!
-    }
-}
-
-extension CSAPIBaseManager {
-    public func showHUD() {
-        MBProgressHUD.showHUDAddedTo(showHUDView, animated: false)
-    }
-    public func hidenHUD() {
-        MBProgressHUD.hideHUDForView(showHUDView, animated: false)
     }
 }
 

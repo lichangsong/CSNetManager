@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3D5014ED1D583911009774CA /* CSAPIBaseManager+HUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D5014EC1D583911009774CA /* CSAPIBaseManager+HUD.swift */; };
 		3D52DA2A1D13CDB100128140 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D52DA291D13CDB100128140 /* AppDelegate.swift */; };
 		3D52DA2C1D13CDB100128140 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D52DA2B1D13CDB100128140 /* ViewController.swift */; };
 		3D52DA2F1D13CDB100128140 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D52DA2D1D13CDB100128140 /* Main.storyboard */; };
@@ -47,6 +48,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3D5014EC1D583911009774CA /* CSAPIBaseManager+HUD.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CSAPIBaseManager+HUD.swift"; sourceTree = "<group>"; };
 		3D52DA261D13CDB100128140 /* CSNetManagerDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CSNetManagerDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3D52DA291D13CDB100128140 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3D52DA2B1D13CDB100128140 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -135,6 +137,7 @@
 				3D52DA6D1D13CF3100128140 /* MessageManager.swift */,
 				3D52DA6E1D13CF3100128140 /* MessageModel.swift */,
 				3D52DA6F1D13CF3100128140 /* MessageReformer.swift */,
+				3D5014EC1D583911009774CA /* CSAPIBaseManager+HUD.swift */,
 				3D52DA2D1D13CDB100128140 /* Main.storyboard */,
 				3D52DA301D13CDB100128140 /* Assets.xcassets */,
 				3D52DA321D13CDB100128140 /* LaunchScreen.storyboard */,
@@ -421,6 +424,7 @@
 				3D52DA721D13CF3100128140 /* MessageReformer.swift in Sources */,
 				3D52DA651D13CF1A00128140 /* CSAPIBaseManager.swift in Sources */,
 				3D52DA661D13CF1A00128140 /* CSRequestGenerator.swift in Sources */,
+				3D5014ED1D583911009774CA /* CSAPIBaseManager+HUD.swift in Sources */,
 				3D52DA2C1D13CDB100128140 /* ViewController.swift in Sources */,
 				3D52DA681D13CF1A00128140 /* CSAPIManagerApiCallBackDelegate.swift in Sources */,
 				3D52DA671D13CF1A00128140 /* CSServer.swift in Sources */,

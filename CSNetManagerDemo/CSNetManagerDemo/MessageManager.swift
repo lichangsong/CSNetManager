@@ -32,6 +32,7 @@ class MessageManager: CSAPIBaseManager,CSAPIManagerDelegate {
     override init() {
         super.init()
 //        self.shouldAutoCacheResultWhenSuccess = true
+        self.timeoutInterval = 3
     }
     
 }

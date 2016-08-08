@@ -49,6 +49,8 @@ class ViewControllerHelper: NSObject,CSAPIManagerApiCallBackDelegate,CSAPIManage
         case CSAPIManagerErrorType.ParamsError:
             // do something
             break
+        case CSAPIManagerErrorType.NoNetWork:
+            break
         default: break
         }
     }
